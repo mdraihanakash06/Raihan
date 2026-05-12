@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silicon Technology | MD RAIHAN - Tech Professional</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --neon-cyan: #00f3ff;
+            --neon-blue: #0ea5e9;
+            --dark-bg: #020617;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--dark-bg);
+            color: #f1f5f9;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .orbitron { font-family: 'Orbitron', sans-serif; }
+
+        /* Animated Grid Background */
+        .tech-grid {
+            background-image: linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-attachment: fixed;
+        }
+
+        /* Glowing UI Components */
+        .neon-text {
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.8), 0 0 30px rgba(0, 243, 255, 0.4);
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(0, 243, 255, 0.1);
+            backdrop-filter: blur(15px);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Enhanced Profile Rings */
+        .profile-orbit {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+        }
+
+        .ring {
+            position: absolute;
+            inset: -15px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+        }
+
+        .ring-1 {
+            border-top: 3px solid var(--neon-cyan);
+            animation: rotate-ring 3s linear infinite;
+        }
+
+        .ring-2 {
+            inset: -25px;
+            border-bottom: 2px solid var(--neon-blue);
+            animation: rotate-ring 6s linear reverse infinite;
+        }
+
+        .ring-3 {
+            inset: -35px;
+            border-left: 1px dashed var(--neon-cyan);
+            opacity: 0.5;
+            animation: rotate-ring 10s linear infinite;
+        }
+
+        @keyframes rotate-ring { 100% { transform: rotate(360deg); } }
+
+        /* Interactive Service Badges */
+        .service-badge {
+            background: rgba(0, 243, 255, 0.05);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: bold;
+            color: var(--neon-cyan);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+        }
+
+        /* Portfolio Gallery styling */
+        .gallery-image {
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .gallery-card:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        /* Stat Card styling */
+        .stat-card {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid rgba(0, 243, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            background: rgba(15, 23, 42, 0.7);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
+        }
+
+        /* Link hover animations */
+        .interactive-link {
+            transition: color 0.3s, transform 0.2s;
+        }
+        .interactive-link:active { transform: scale(0.95); }
+    </style>
+</head>
+<body class="tech-grid">
+
+    <!-- Header Section -->
+    <header class="pt-24 pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <!-- Profile with enhanced rotating rings -->
+            <div class="profile-orbit mb-20">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+                <img src="https://lh3.googleusercontent.com/d/1sdxGzMxoy-RpG2DGeFilyJPmthn9yy_e" alt="MD RAIHAN" class="w-full h-full rounded-full object-cover border-4 border-slate-900 shadow-2xl relative z-10">
+            </div>
+
+            <h1 class="orbitron text-5xl md:text-8xl font-black mb-8 neon-text tracking-tighter uppercase">MD RAIHAN</h1>
+            
+            <!-- Styled Expertise Badges -->
+            <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
+                <div class="service-badge">Computer Building & Servicing</div>
+                <div class="service-badge">Laptop Servicing</div>
+                <div class="service-badge">CCTV Camera Expert</div>
+                <div class="service-badge">Printer Servicing</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Work Showcase Gallery (Moving this up) -->
+    <section class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
+        <div class="flex items-center gap-4 mb-16 mt-8">
+            <div class="h-[2px] w-16 bg-cyan-500"></div>
+            <h2 class="orbitron text-2xl font-bold uppercase tracking-widest">Digital Portfolio</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- PC Build -->
+            <div class="gallery-card relative overflow-hidden rounded-xl h-64 border border-cyan-900/30 glass-card">
+                <img src="https://lh3.googleusercontent.com/d/1VaYP8Xacgw5rJdOXyGO7HYfjjL-YNGTA" class="gallery-image w-full h-full object-cover opacity-80">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-end p-6">
+                    <h4 class="orbitron text-sm font-bold uppercase tracking-wider">Custom PC Build</h4>
+                </div>
+            </div>
+            <!-- Laptop Repair -->
+            <div class="gallery-card relative overflow-hidden rounded-xl h-64 border border-cyan-900/30 glass-card">
+                <img src="https://lh3.googleusercontent.com/d/1boagRsvcjCKrFFE01s5UGtUP1lA5yLQM" class="gallery-image w-full h-full object-cover opacity-80">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-end p-6">
+                    <h4 class="orbitron text-sm font-bold uppercase tracking-wider">Laptop Repair</h4>
+                </div>
+            </div>
+            <!-- CCTV -->
+            <div class="gallery-card relative overflow-hidden rounded-xl h-64 border border-cyan-900/30 glass-card">
+                <img src="https://lh3.googleusercontent.com/d/1BKx6EjX38kLxRffIZe_RvScb-PR3Va5z" class="gallery-image w-full h-full object-cover opacity-80">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-end p-6">
+                    <h4 class="orbitron text-sm font-bold uppercase tracking-wider">CCTV Expert</h4>
+                </div>
+            </div>
+            <!-- Printer -->
+            <div class="gallery-card relative overflow-hidden rounded-xl h-64 border border-cyan-900/30 glass-card">
+                <img src="https://lh3.googleusercontent.com/d/1h9uOR5J3ltTMN9cPRod2TbOtt801NMTD" class="gallery-image w-full h-full object-cover opacity-80">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-end p-6">
+                    <h4 class="orbitron text-sm font-bold uppercase tracking-wider">Printer Service</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section (Moving this down) -->
+    <section class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-800">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Left: Text Content -->
+            <div class="space-y-6">
+                <div class="space-y-2">
+                    <p class="orbitron text-cyan-400 font-bold tracking-[0.4em] text-xs uppercase">About Me</p>
+                    <h2 class="orbitron text-4xl md:text-5xl font-black uppercase">Who I Am</h2>
+                    <div class="h-1 w-20 bg-cyan-400"></div>
+                </div>
+                
+                <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
+                    <p>
+                        I'm <span class="text-white font-bold">MD Raihan</span>, a dedicated technician and solution provider based in Gazipur, Dhaka. With hands-on expertise in computer hardware, printer mechanics, CCTV systems, and electronics, I deliver reliable digital solutions for homes and businesses.
+                    </p>
+                    <p>
+                        At <span class="text-cyan-400 font-bold">Silicon Technology</span>, my mission is simple: provide expert, honest, and fast technical service – so your devices work the way they should.
+                    </p>
+                    <p>
+                        Whether it's a broken laptop screen, a jammed printer fuser, a CCTV system for your property, or building your dream PC from scratch – I've got you covered.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Stats Grid -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="stat-card">
+                    <p class="orbitron text-3xl font-black text-cyan-400 mb-2">5+</p>
+                    <p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Years Experience</p>
+                </div>
+                <div class="stat-card">
+                    <p class="orbitron text-3xl font-black text-cyan-400 mb-2">500+</p>
+                    <p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Devices Repaired</p>
+                </div>
+                <div class="stat-card">
+                    <p class="orbitron text-3xl font-black text-cyan-400 mb-2">100%</p>
+                    <p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Client Satisfaction</p>
+                </div>
+                <div class="stat-card">
+                    <p class="orbitron text-3xl font-black text-cyan-400 mb-2">5</p>
+                    <p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Core Services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Contact Section -->
+    <section class="max-w-6xl mx-auto px-6 py-24 mb-20">
+        <div class="glass-card rounded-[2.5rem] p-8 md:p-16 border-t-2 border-cyan-500 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="space-y-12">
+                    <h3 class="orbitron text-3xl font-black neon-text uppercase tracking-tight">Connect with System</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- Click to Call -->
+                        <a href="tel:01571504384" class="group interactive-link flex items-center gap-5">
+                            <div class="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-black shadow-lg">
+                                <i class="fa-solid fa-phone-flip text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-[0.2em]">Phone Hotline</p>
+                                <p class="text-xl font-bold tracking-tight">01571504384</p>
+                            </div>
+                        </a>
+
+                        <!-- Click to WhatsApp -->
+                        <a href="https://wa.me/8801996360822" target="_blank" class="group interactive-link flex items-center gap-5">
+                            <div class="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-black shadow-lg">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-[0.2em]">WhatsApp Chat</p>
+                                <p class="text-xl font-bold tracking-tight">01996360822</p>
+                            </div>
+                        </a>
+
+                        <!-- Click to Email -->
+                        <a href="mailto:mdraihanakash06@gmail.com" class="group interactive-link flex items-center gap-5">
+                            <div class="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-black shadow-lg">
+                                <i class="fa-solid fa-envelope-open-text text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-[0.2em]">Send Email</p>
+                                <p class="text-base md:text-lg font-bold tracking-tight">mdraihanakash06</p>
+                            </div>
+                        </a>
+
+                        <!-- Click to Map -->
+                        <a href="https://maps.app.goo.gl/s2CDbZCzCbay6kYS6" target="_blank" class="group interactive-link flex items-center gap-5">
+                            <div class="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center text-red-500 group-hover:bg-red-500 group-hover:text-black shadow-lg">
+                                <i class="fa-solid fa-map-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-[0.2em]">Visit Shop</p>
+                                <p class="text-xl font-bold tracking-tight">Shibbari More, Gazipur</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Digital ID / Live QR -->
+                <div class="flex flex-col items-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-cyan-500/10 rounded-3xl blur-xl group-hover:bg-cyan-500/30 transition"></div>
+                        <div class="relative bg-black p-5 rounded-[2rem] border-2 border-cyan-400/30">
+                            <!-- WhatsApp Live QR -->
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://wa.me/8801996360822&color=00f3ff&bgcolor=000000" alt="WhatsApp Connect" class="w-56 h-56 md:w-64 md:h-64 rounded-xl">
+                        </div>
+                    </div>
+                    <p class="orbitron text-xs text-cyan-500 font-bold tracking-[0.5em] mt-10 uppercase">System QR ID</p>
+                    <p class="text-slate-600 text-[10px] uppercase mt-2 tracking-widest font-bold">Silicon Technology Verified</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 text-center border-t border-slate-900 bg-slate-950/50">
+        <div class="orbitron text-[10px] text-slate-600 tracking-[1.5em] uppercase mb-4">
+            Authorized Digital Platform // 2026
+        </div>
+        <div class="text-slate-700 text-xs font-bold uppercase tracking-widest">
+            Silicon Technology | Registered in Gazipur, Bangladesh
+        </div>
+    </footer>
+
+</body>
+</html>
